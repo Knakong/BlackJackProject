@@ -6,6 +6,17 @@ import java.util.List;
 import com.skilldistillery.cards.Card;
 
 public abstract class Hand {
+	protected List<Card> cards = new ArrayList<>();
+
+	
+	public String toString() {
+		return " hand " + cards;
+	}
+
+
+
+	
+	
 	public List<Card> getCards() {
 		return cards;
 	}
@@ -14,7 +25,6 @@ public abstract class Hand {
 		this.cards = cards;
 	}
 
-	protected List<Card> cards = new ArrayList<>();
 	public Hand() {
 	
 	}
@@ -26,7 +36,7 @@ public abstract class Hand {
 	public void clear() {
 		cards.removeAll(cards);
 	}
-	public abstract int  getHandValue(); {
+	public abstract int  getHandValue(); 
 		
-	}
+	
 }

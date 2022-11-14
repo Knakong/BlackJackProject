@@ -22,7 +22,7 @@ shuffle();
 public Card getCard() {
 	return deck.get(0);
 }
-public Card dealCard() {
+public Card removeCard() {
 	
 	return deck.remove(0);
 	
@@ -30,7 +30,19 @@ public Card dealCard() {
 public void shuffle() {
 	Collections.shuffle(deck);
 }
+public int cardsLeftinDeck(){
+int count = 0;
+	for (Card card : deck) {
+	int i = 0;
+	if (card != null) {
+		i++;
+		count = i;
+	}
+}
+	
+return count;
+}
 public void checkDeckSize() {
-	System.out.println(deck.size());
+	System.out.print(deck.size());
 }
 }
